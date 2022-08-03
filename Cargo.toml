@@ -1,0 +1,13 @@
+[package]
+name = "mdbook-sitemap-generator"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Utility to generate a sitemap.xml file for an mdbook project"
+repository = "https://github.com/rxdn/mdbook-sitemap-generator"
+readme = "README.md"
+
+[dependencies]
+serde = { version = "1" }
+serde-xml-rs = { version = "0.5" }
+clap = { version = "3", features = ["derive"] }
