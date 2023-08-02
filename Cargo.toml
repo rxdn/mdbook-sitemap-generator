@@ -8,6 +8,6 @@ repository = "https://github.com/rxdn/mdbook-sitemap-generator"
 readme = "README.md"
 
 [dependencies]
-serde = { version = "1" }
-serde-xml-rs = { version = "0.5" }
+serde = { version = "1", features = ["derive"]}
 clap = { version = "3", features = ["derive"] }
+quick-xml = { version = "0", features = ["serialize"] }
