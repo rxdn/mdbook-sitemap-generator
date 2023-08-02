@@ -24,8 +24,10 @@ fn main() {
         args.domain = stripped.to_string();
     }
 
-    if args.domain.starts_with("http") {
+    if !args.domain.starts_with("https") {
         args.domain = format!("https://{}", args.domain);
+    } else if args.domain.starts_with("http") {
+        args.domain = args.domain.replace("http", "https");
     }
 
     let dir = fs::read_dir("src").expect("Unable to read src directory");
