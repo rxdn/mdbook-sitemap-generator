@@ -25,6 +25,8 @@ fn main() {
     }
 
     if args.domain.starts_with("http") {
+        args.domain = args.domain.replace("http", "https");
+    } else if !args.domain.starts_with("https") {
         args.domain = format!("https://{}", args.domain);
     }
 
